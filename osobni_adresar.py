@@ -43,7 +43,7 @@ class Kontakt:
 
         return el
 
-    #@staticmethod
+    
     def from_xml(el):
         ime = el.find("ime").text
         prezime = el.find("prezime").text
@@ -67,6 +67,7 @@ class PrivatniKontakt(Kontakt):
 class PoslovniKontakt(Kontakt):
     def __init__(self, ime, prezime="", telefoni=None, emailovi=None, datum_rodjenja=None, grupa="Posao", tvrtka=None):
         super().__init__(ime, prezime, telefoni, emailovi, datum_rodjenja, grupa, tvrtka)
+
 
 #Glavna aplikacija
 class ConnectSphereApp:
